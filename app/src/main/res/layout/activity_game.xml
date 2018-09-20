@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_boss00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/scroller_bg"
+        android:alpha="0.7"
+        android:layout_width="wrap_content"
+        android:layout_height="89dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/slider_boss01" />
+
+    <ImageView
+        android:id="@+id/target_img1"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/target_1"
+        app:layout_constraintEnd_toEndOf="@+id/target_1"
+        app:layout_constraintStart_toStartOf="@+id/target_1"
+        app:layout_constraintTop_toTopOf="@+id/target_1"
+        app:srcCompat="@drawable/card_target" />
+
+    <ImageView
+        android:id="@+id/target_img2"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/target_2"
+        app:layout_constraintEnd_toEndOf="@+id/target_2"
+        app:layout_constraintStart_toStartOf="@+id/target_2"
+        app:layout_constraintTop_toTopOf="@+id/target_2"
+        app:srcCompat="@drawable/card_target" />
+
+    <ImageView
+        android:id="@+id/target_img3"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/target_3"
+        app:layout_constraintEnd_toEndOf="@+id/target_3"
+        app:layout_constraintStart_toStartOf="@+id/target_3"
+        app:layout_constraintTop_toTopOf="@+id/target_3"
+        app:srcCompat="@drawable/card_target" />
+
+    <ImageView
+        android:id="@+id/target_img4"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/target_4"
+        app:layout_constraintEnd_toEndOf="@+id/target_4"
+        app:layout_constraintStart_toStartOf="@+id/target_4"
+        app:layout_constraintTop_toTopOf="@+id/target_4"
+        app:srcCompat="@drawable/card_target" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="513dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp"></LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/endTurn_button"
+        style="@style/AlertDialog.AppCompat.Light"
+        android:layout_width="137dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:alpha="0.8"
+        android:onClick="onClickEndTurnButton"
+        app:layout_constraintBottom_toTopOf="@+id/health_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boss_img"
+        app:srcCompat="@drawable/img_main_button" />
+
+    <ImageView
+        android:id="@+id/gold_img"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/scroller_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/health_img"
+        app:srcCompat="@drawable/gold" />
+
+    <ImageView
+        android:id="@+id/health_img"
+        android:layout_width="105dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/gold_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTurn_button"
+        app:srcCompat="@drawable/health" />
+
+    <TextView
+        android:id="@+id/health_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text=": 100"
+        app:layout_constraintBottom_toBottomOf="@+id/health_img"
+        app:layout_constraintEnd_toEndOf="@+id/health_img"
+        app:layout_constraintStart_toStartOf="@+id/health_img"
+        app:layout_constraintTop_toTopOf="@+id/health_img" />
+
+    <TextView
+        android:id="@+id/gold_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text=": 100"
+        app:layout_constraintBottom_toBottomOf="@+id/gold_img"
+        app:layout_constraintEnd_toEndOf="@+id/gold_img"
+        app:layout_constraintStart_toStartOf="@+id/gold_img"
+        app:layout_constraintTop_toTopOf="@+id/gold_img" />
+
+    <TextView
+        android:id="@+id/end_turn_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_button_end_turn"
+        app:layout_constraintBottom_toBottomOf="@+id/endTurn_button"
+        app:layout_constraintEnd_toEndOf="@+id/endTurn_button"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/endTurn_button"
+        app:layout_constraintTop_toTopOf="@+id/endTurn_button"
+        app:layout_constraintVertical_bias="1.0"
+        android:textSize="20dp"
+        android:fontFamily="@font/almendra_sc"
+        android:textColor="#FFFF"/>
+
+    <ImageView
+        android:id="@+id/boss_img"
+        android:layout_width="190dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/boss_name"
+        android:layout_width="156dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="Boss_name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/boss_img"
+        app:layout_constraintEnd_toEndOf="@+id/boss_img"
+        app:layout_constraintStart_toStartOf="@+id/boss_img" />
+
+    <ImageView
+        android:id="@+id/hearth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hearth" />
+
+    <TextView
+        android:id="@+id/boss_health"
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/almendra_sc"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/hearth"
+        app:layout_constraintEnd_toEndOf="@+id/hearth"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/hearth"
+        app:layout_constraintTop_toTopOf="@+id/hearth" />
+
+    <include
+        android:id="@+id/target_1"
+        layout="@layout/card_layout"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="460dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/target_4"
+        layout="@layout/card_layout"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="460dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <include
+        android:id="@+id/target_3"
+        layout="@layout/card_layout"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="460dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/target_2"
+        layout="@layout/card_layout"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="460dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/left_particles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/right_particles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

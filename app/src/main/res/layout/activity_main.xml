@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.v41.tp3mobile.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:onClick="onClickBackgroundImage"
+        app:srcCompat="@drawable/img_main_background" />
+
+    <ImageView
+        android:id="@+id/iv_background2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.6"
+        app:srcCompat="@drawable/img_main_background2" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="@string/game_title"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/btn_play"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/text_button_play"
+        android:onClick="onClickPlayButton"
+        app:srcCompat="@drawable/img_main_button" />
+
+    <TextView
+        android:id="@+id/tv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_play"
+        android:layout_alignLeft="@+id/btn_play"
+        android:layout_alignRight="@+id/btn_play"
+        android:layout_alignTop="@+id/btn_play"
+        android:layout_margin="1dp"
+        android:fontFamily="@font/almendra_sc"
+        android:gravity="center"
+        android:text="@string/text_button_play"
+        android:textColor="#FFFF"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/btn_collection"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/btn_play"
+        android:layout_alignStart="@+id/btn_play"
+        android:layout_below="@+id/btn_play"
+        android:layout_marginTop="19dp"
+        android:onClick="onClickDeckButton"
+        app:srcCompat="@drawable/img_main_button"/>
+
+    <TextView
+        android:id="@+id/tv_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_collection"
+        android:layout_alignLeft="@+id/btn_collection"
+        android:layout_alignRight="@+id/btn_collection"
+        android:layout_alignTop="@+id/btn_collection"
+        android:layout_margin="1dp"
+        android:fontFamily="@font/almendra_sc"
+        android:gravity="center"
+        android:text="@string/text_button_collection"
+        android:textColor="#FFFF"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/btn_trade"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/btn_collection"
+        android:layout_alignStart="@+id/btn_collection"
+        android:layout_below="@+id/btn_collection"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickTradeButton"
+        app:srcCompat="@drawable/img_main_button" />
+
+    <TextView
+        android:id="@+id/tv_trade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_trade"
+        android:layout_alignLeft="@+id/btn_trade"
+        android:layout_alignRight="@+id/btn_trade"
+        android:layout_alignTop="@+id/btn_trade"
+        android:layout_margin="1dp"
+        android:fontFamily="@font/almendra_sc"
+        android:gravity="center"
+        android:text="@string/text_button_trade"
+        android:textColor="#FFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@android:color/black"
+        android:elevation="100dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="Tap anywhere to continue."
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+</RelativeLayout>

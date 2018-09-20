@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:background="@drawable/img_trade_background"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/target_img1"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:alpha="0.3"
+        android:onClick="onClickTarget"
+        app:layout_constraintBottom_toBottomOf="@+id/target_1"
+        app:layout_constraintEnd_toEndOf="@+id/target_1"
+        app:layout_constraintStart_toStartOf="@+id/target_1"
+        app:layout_constraintTop_toTopOf="@+id/target_1"
+        app:srcCompat="@drawable/card_target" />
+
+    <include
+        android:id="@+id/target_1"
+        layout="@layout/card_layout"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="44dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/cardLayout"
+        layout="@layout/card_layout"
+        android:visibility="gone" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_playerCards"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/img_main_background2"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771">
+
+
+        <LinearLayout
+            android:id="@+id/id_gallery_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_yourcards"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="524dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="Your Cards"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/hsv_playerCards"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_deckCards"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="@string/text_button_return"
+        android:onClick="onClickReturnButton"
+        app:layout_constraintBottom_toTopOf="@+id/hsv_playerCards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TP3Mobile</string>
+    <string name="game_title">Card Guardians</string>
+    <string name="text_button_play">Play</string>
+    <string name="text_button_collection">Collection</string>
+    <string name="text_button_trade">Trade</string>
+    <string name="text_button_back">Back to main menu</string>
+    <string name="text_button_return">Return</string>
+    <string name="text_button_end_turn">End turn</string>
+    <string name="text_button_main_menu">Main menu</string>
+    <string name="text_button_fight">Fight</string>
+    <string name="text_button_end_game">Reveal your new card !</string>
+    <string name="text_victory">Boss defeated: </string>
+    <string name="text_defeat"> defeated you!</string>
+</resources>
